@@ -70,22 +70,16 @@ nav a:hover {
 
 /* Main Content */
 main {
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  width: 100%;
 }
 
 h1 {
+  grid-column: 1 / -1;
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
@@ -223,18 +217,14 @@ footer p:first-child {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .cards-container {
+@media (max-width: 768px) {
+  main {
     grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 1rem auto;
     gap: 1.5rem;
   }
   
-  main {
-    max-width: 800px;
-  }
-}
-
-@media (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 0;
