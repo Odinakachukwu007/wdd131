@@ -1,0 +1,119 @@
+/* Large Screen Styles - Desktop and Tablet Landscape */
+@media screen and (min-width: 700px) {
+  
+  /* Hide hamburger menu on large screens */
+  #menuButton {
+    display: none;
+  }
+  
+  /* Show horizontal navigation */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    justify-content: flex-end;
+    gap: 1rem;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+  
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Header adjustments for larger screens */
+  header {
+    padding: 1.5rem 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Main grid layout for larger screens */
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    align-items: stretch;
+  }
+  
+  main h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0 3rem 0;
+  }
+  
+  /* Enhanced figure styles for larger screens */
+  figure {
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  
+  figcaption {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Footer enhancements */
+  footer {
+    padding: 2rem;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Large Screens */
+@media screen and (min-width: 1024px) {
+  
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 3rem;
+    align-items: stretch;
+  }
+  
+  header {
+    padding: 2rem 3rem;
+  }
+  
+  header h1 {
+    font-size: 2.25rem;
+  }
+  
+  nav a {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  figure {
+    padding: 2rem;
+  }
+  
+  main h1 {
+    font-size: 3rem;
+    margin: 2rem 0 4rem 0;
+  }
+}
+
+/* Very Large Screens - Prevent excessive stretching */
+@media screen and (min-width: 1400px) {
+  
+  main {
+    max-width: 1400px;
+    padding: 3rem;
+  }
+  
+  header {
+    padding: 2rem 3rem;
+  }
+}

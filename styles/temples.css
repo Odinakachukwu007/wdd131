@@ -1,0 +1,211 @@
+/* CSS Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fdd835;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles - Mobile First (Hidden by default) */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-weight: 400;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #fdd835;
+  color: #1e3c72;
+  outline: none;
+}
+
+/* Hamburger Menu Button */
+#menuButton {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+#menuButton:hover,
+#menuButton:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+/* Main Content Layout */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  align-items: stretch;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+/* Figure and Image Styles */
+figure {
+  text-align: center;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+figure:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+figure img {
+  width: 100%;
+  height: 250px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #1e3c72;
+  font-size: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+footer p:first-child {
+  font-weight: 600;
+}
+
+/* Accessibility and Focus Styles */
+*:focus {
+  outline: 2px solid #fdd835;
+  outline-offset: 2px;
+}
+
+/* Skip Link for Screen Readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #1e3c72;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+
+/* Loading states */
+img {
+  background-color: #f0f0f0;
+  min-height: 200px;
+}
+
+/* Print Styles */
+@media print {
+  header, footer {
+    background: transparent !important;
+    color: black !important;
+  }
+  
+  #menuButton {
+    display: none;
+  }
+  
+  nav {
+    display: none !important;
+  }
+}
