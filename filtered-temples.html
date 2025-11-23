@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album - WDD131</title>
+  <meta name="description" content="Browse and filter temples by age, size, and dedication date. A dynamic photo gallery showcasing beautiful temples from around the world.">
+  <meta name="author" content="Prosper Anosike">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Filtered Temple Album</h1>
+    <nav>
+      <a href="#" id="home">Home</a>
+      <a href="#" id="old">Old</a>
+      <a href="#" id="new">New</a>
+      <a href="#" id="large">Large</a>
+      <a href="#" id="small">Small</a>
+    </nav>
+    <button id="menuButton" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="temple-cards">
+  </main>
+
+  <footer>
+    <p>©<span id="currentyear"></span> 🌟 Prosper Anosike 🌍 Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

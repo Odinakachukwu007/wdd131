@@ -1,0 +1,191 @@
+/* Mobile-First CSS for Filtered Temple Album */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fdd835;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile navigation - hidden by default */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-weight: 400;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #fdd835;
+  color: #1e3c72;
+  outline: none;
+}
+
+/* Hamburger menu button */
+#menuButton {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+#menuButton:hover,
+#menuButton:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #fdd835;
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+/* Temple card styling */
+figure {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+figure:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+figure h3 {
+  color: #1e3c72;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background-color: #f0f0f0;
+}
+
+figure p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+figure p strong {
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+footer p:first-child {
+  font-weight: 600;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #fdd835;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  header, footer {
+    background: transparent !important;
+    color: black !important;
+  }
+  
+  #menuButton {
+    display: none;
+  }
+  
+  nav {
+    display: none !important;
+  }
+  
+  figure {
+    page-break-inside: avoid;
+  }
+}

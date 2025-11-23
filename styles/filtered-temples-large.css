@@ -1,0 +1,121 @@
+/* Large Screen Styles for Filtered Temple Album */
+
+@media screen and (min-width: 700px) {
+  
+  /* Hide hamburger menu on larger screens */
+  #menuButton {
+    display: none;
+  }
+  
+  /* Show navigation horizontally */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    justify-content: flex-end;
+    gap: 1rem;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+  
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Header adjustments */
+  header {
+    padding: 1.5rem 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Grid layout for temple cards */
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Enhanced card styles */
+  figure {
+    padding: 1.5rem;
+  }
+  
+  figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  
+  figure h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  figure p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Footer enhancements */
+  footer {
+    padding: 2rem;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+/* Larger desktop screens */
+@media screen and (min-width: 1024px) {
+  
+  /* Three column layout */
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+  }
+  
+  header {
+    padding: 2rem 3rem;
+  }
+  
+  header h1 {
+    font-size: 2.25rem;
+  }
+  
+  nav a {
+    font-size: 1.05rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  figure {
+    padding: 1.75rem;
+  }
+  
+  figure h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Very large screens - optimize layout */
+@media screen and (min-width: 1400px) {
+  
+  main {
+    max-width: 1600px;
+    padding: 3rem;
+    gap: 2.5rem;
+  }
+  
+  header {
+    padding: 2rem 3rem;
+  }
+  
+  figure {
+    padding: 2rem;
+  }
+}
