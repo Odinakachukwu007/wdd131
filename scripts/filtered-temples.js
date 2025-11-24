@@ -64,7 +64,7 @@ const temples = [
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 53997,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-933045-wallpaper.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   },
   {
     templeName: "Rome Italy",
