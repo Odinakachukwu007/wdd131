@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact us or share your Nigerian experience. We'd love to hear your questions, feedback, and travel stories.">
+  <meta name="author" content="Prosper Anosike">
+  <meta name="keywords" content="contact Nigeria tourism, travel feedback, Nigerian travel questions">
+  <title>Contact Us - Naija: Stories & Sights</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/large.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="images/logo.svg" alt="Naija Stories and Sights Logo" class="logo">
+      <nav>
+        <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="tourism.html">Tourism</a></li>
+          <li><a href="form.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero form-hero">
+      <div class="container">
+        <h1>Get in Touch</h1>
+        <p class="hero-description">Share Your Thoughts, Questions, or Travel Stories</p>
+      </div>
+    </section>
+
+    <section class="form-section container">
+      <div class="form-intro">
+        <h2>We'd Love to Hear From You</h2>
+        <p>Whether you're planning a trip to Nigeria, have questions about our culture, or want to share your experiences, we're here to listen. Fill out the form below, and we'll get back to you as soon as possible.</p>
+      </div>
+
+      <div class="form-container">
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="full-name">Full Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="full-name" 
+              name="fullName" 
+              required 
+              minlength="2"
+              maxlength="100"
+              placeholder="Enter your full name"
+              aria-required="true"
+            >
+            <span class="error-message" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="your.email@example.com"
+              aria-required="true"
+            >
+            <span class="error-message" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="optional">(Optional)</span></label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              placeholder="+234 xxx xxx xxxx"
+            >
+            <span class="error-message" id="phone-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="visit-status">Have you visited Nigeria?</label>
+            <select id="visit-status" name="visitStatus">
+              <option value="">Select an option</option>
+              <option value="yes">Yes, I have visited</option>
+              <option value="planning">Planning to visit</option>
+              <option value="interested">Interested in visiting</option>
+              <option value="no">No, just curious</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">What interests you most about Nigeria?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="culture">
+                <span>Culture & Traditions</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="food">
+                <span>Food & Cuisine</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="tourism">
+                <span>Tourism & Travel</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="music">
+                <span>Music & Entertainment</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="business">
+                <span>Business & Investment</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="other">
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message <span class="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              minlength="10"
+              maxlength="1000"
+              rows="6"
+              placeholder="Tell us your thoughts, questions, or share your Nigerian experience..."
+              aria-required="true"
+            ></textarea>
+            <span class="char-count"><span id="char-count">0</span>/1000</span>
+            <span class="error-message" id="message-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label consent-label">
+              <input type="checkbox" id="consent" name="consent" required aria-required="true">
+              <span>I consent to having this website store my submitted information <span class="required">*</span></span>
+            </label>
+            <span class="error-message" id="consent-error"></span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="reset" class="reset-btn">Clear Form</button>
+          </div>
+        </form>
+
+        <div id="form-success" class="success-message hidden">
+          <div class="success-content">
+            <h3>Thank You!</h3>
+            <p>Your message has been received. We appreciate you taking the time to share your thoughts with us.</p>
+            <button id="close-success" class="cta-button">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info container">
+      <h2>Other Ways to Connect</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h3>Visit Us Online</h3>
+          <p>Explore more about Nigeria through our comprehensive website featuring culture, tourism, and authentic local insights.</p>
+        </div>
+        <div class="contact-card">
+          <h3>Share Your Story</h3>
+          <p>Have you visited Nigeria? Your experiences and photos could inspire others. Use the form above to share your journey.</p>
+        </div>
+        <div class="contact-card">
+          <h3>Stay Updated</h3>
+          <p>Check back regularly for new content about Nigerian festivals, travel tips, and cultural highlights.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="previous-submissions container">
+      <h2>Recent Submissions</h2>
+      <p class="section-description">See what others are saying about Nigeria:</p>
+      <div id="submissions-display" class="submissions-container">
+        <p class="no-submissions">No submissions yet. Be the first to share your thoughts!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy;<span id="currentyear"></span> Naija: Stories & Sights | 🌟 Prosper Anosike 🌍 Nigeria | WDD 131</p>
+        <p><a href="references.html" class="footer-link">Image & Content References</a></p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

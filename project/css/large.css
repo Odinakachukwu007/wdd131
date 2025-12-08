@@ -1,0 +1,438 @@
+/* Large Screen Styles - Desktop & Tablet */
+/* Naija: Stories & Sights - WDD 131 Final Project */
+
+/* ===== TABLET BREAKPOINT (min-width: 640px) ===== */
+@media screen and (min-width: 640px) {
+  
+  /* Typography adjustments */
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  /* Hero sections */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  /* Stats grid - 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Facts grid - 2 columns */
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cards grid - 2 columns */
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cuisine grid - 2 columns */
+  .cuisine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Travel tips - 2 columns */
+  .travel-tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact cards - 3 columns */
+  .contact-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Form actions side by side */
+  .form-actions {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ===== DESKTOP BREAKPOINT (min-width: 1024px) ===== */
+@media screen and (min-width: 1024px) {
+
+  /* Header navigation - horizontal layout */
+  header .container {
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav {
+    width: auto;
+    order: 2;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+  }
+
+  #nav-menu li {
+    margin: 0;
+  }
+
+  #nav-menu a {
+    border-bottom: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+  }
+
+  #nav-menu a:hover,
+  #nav-menu a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 1.25rem;
+  }
+
+  #nav-menu a.active {
+    background-color: var(--accent);
+    color: var(--primary);
+  }
+
+  /* Hero sections - larger text */
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+  }
+
+  /* Hero with side-by-side content */
+  .hero {
+    padding: 5rem 2rem;
+  }
+
+  /* Stats grid - 4 columns */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .stat-card {
+    padding: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  /* Facts grid - 2 columns */
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Cards grid - 3 columns */
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .card img,
+  .festival-card img,
+  .destination-card img {
+    height: 220px;
+  }
+
+  /* Festivals container - 2 columns */
+  .festivals-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Destinations grid - 2 columns */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Ethnic groups grid - 3 columns */
+  .ethnic-groups-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Music highlights - 3 columns */
+  .music-highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Cuisine grid - 3 columns */
+  .cuisine-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Travel tips - 3 columns */
+  .travel-tips-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Contact cards - 3 columns */
+  .contact-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Sections with more padding */
+  .intro,
+  .content-section {
+    padding: 3rem 2rem;
+  }
+
+  .form-section,
+  .contact-info,
+  .previous-submissions,
+  .references-section {
+    padding: 3rem 2rem;
+  }
+
+  /* Form container - larger */
+  .form-container {
+    padding: 3rem;
+  }
+
+  /* Interactive sections */
+  .interactive-section {
+    padding: 3rem 2rem;
+  }
+
+  /* Footer - horizontal layout */
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-content p {
+    margin: 0;
+  }
+
+  /* Submission/Message items - better layout */
+  .submission-header,
+  .message-header {
+    flex-wrap: nowrap;
+  }
+
+  /* Reference items - better spacing */
+  .reference-item {
+    padding: 2rem;
+  }
+
+  /* Hover effects enhancement */
+  .card:hover,
+  .festival-card:hover,
+  .destination-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .cuisine-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ===== WIDE DESKTOP BREAKPOINT (min-width: 1280px) ===== */
+@media screen and (min-width: 1280px) {
+
+  /* Container - wider */
+  .container {
+    max-width: 1200px;
+  }
+
+  /* Hero - even larger */
+  .hero {
+    padding: 6rem 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  /* Typography - larger */
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Stats - larger numbers */
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  /* Cards - taller images */
+  .card img,
+  .festival-card img,
+  .destination-card img {
+    height: 250px;
+  }
+
+  /* Destinations - 3 columns option */
+  .destinations-grid.three-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Better spacing throughout */
+  .intro,
+  .content-section,
+  .form-section,
+  .contact-info,
+  .previous-submissions,
+  .references-section {
+    padding: 4rem 2rem;
+  }
+
+  /* Interactive sections - more spacious */
+  .interactive-section {
+    padding: 4rem 3rem;
+  }
+
+  /* Form - more comfortable */
+  .form-container {
+    max-width: 800px;
+    padding: 4rem;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  
+  header,
+  nav,
+  footer,
+  .cta-button,
+  .filter-buttons,
+  .itinerary-selector,
+  .form-actions {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .card,
+  .festival-card,
+  .destination-card,
+  .stat-card,
+  .fact-item {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card:hover,
+  .festival-card:hover,
+  .destination-card:hover,
+  .stat-card:hover,
+  .cuisine-card:hover {
+    transform: none;
+  }
+
+  .cta-button:hover,
+  .submit-btn:hover {
+    transform: none;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  
+  :root {
+    --primary: #000080;
+    --accent: #FFD700;
+    --text: #000000;
+    --border-light: #000000;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+  }
+
+  .card,
+  .festival-card,
+  .destination-card,
+  .stat-card {
+    border: 2px solid var(--border-light);
+  }
+}
